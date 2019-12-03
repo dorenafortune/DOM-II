@@ -88,3 +88,12 @@ const btn = document.querySelectorAll(".btn").forEach((el) => {
 });
 
 
+//prevent.Default();
+
+const noRefresh = document.querySelectorAll(".nav-link").forEach((el) => {
+    el.addEventListener("click", (event) => {
+        console.log("You can't refresh!! Stopping the link");
+        
+        event.preventDefault();
+    })
+})
