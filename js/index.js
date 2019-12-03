@@ -70,5 +70,21 @@ window.addEventListener('keydown', () =>{
 } )
 
 window.addEventListener('keyup', () =>{
-    console.log('some person released the key');
+    console.log('some body person released the key');
 })
+
+//stopPropagation();
+
+const destination = document.querySelectorAll(".destination").forEach((el) => {
+    el.addEventListener("click", () => {
+        el.style.backgroundColor = "lightblue";
+    })
+});
+const btn = document.querySelectorAll(".btn").forEach((el) => {
+    el.addEventListener("click", (event) => {
+        console.log("Someone pressed me!");
+        event.stopPropagation();
+    })
+});
+
+
